@@ -1,6 +1,7 @@
 * {
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
+    line-height: 24px;
 }
 
 h1 {
@@ -52,6 +53,8 @@ main {
 }
 section {
     width: 80vw;
+
+    margin-bottom: 40px;
 }
 
 .criar-quizz {
@@ -70,7 +73,7 @@ section {
     justify-content: space-around;
     align-items: center;
 
-    margin: 100px auto 40px;
+    margin: 120px auto 40px;
 }
 
 .criar-quizz h2 {
@@ -78,7 +81,7 @@ section {
 }
 
 .criar-quizz button {
-    width: 40vw;
+    width: 10vw;
     height: 40px;
 
     color: #ec362d;
@@ -93,8 +96,9 @@ section {
 .card {
     width: 25vw;
     height: 181px;
+
     position: relative;
-    margin-top: 20px;
+    margin: 20px 20px 0 0;
 }
 
 .card img {
@@ -117,6 +121,7 @@ section {
     align-items: flex-end;
     justify-content: center;
 
+    border-radius: 5px;
     background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 64.58%, #000000 100%);
 }
 
@@ -128,17 +133,13 @@ section {
 }
 
 .quizzes {
+    width: 80vw;
+
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: space-between;
-    width: 80vw;
+    justify-content: flex-start;
 }
-
-.hide {
-    display: none !important;
-}    
-
 
 .create-quizz {
     display: flex;
@@ -179,4 +180,34 @@ section {
     border-radius: 15px;
     
     background-color: #ec362d;
+}
+
+.seus-quizzes {
+    width: 80vw;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.seus-quizzes ion-icon {
+    width: 30px;
+    height: 30px;
+
+    color: #ec362d;
+
+    margin-left: 15px;
+}
+
+.pessoais {
+    margin-top: 120px;
+}
+
+.hide {
+    display: none;
+}
+
+footer {
+    width: 100vw;
+    height: 100px;
 }
