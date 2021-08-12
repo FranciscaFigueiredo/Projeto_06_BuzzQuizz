@@ -26,9 +26,9 @@
             <h1>BuzzQuizz</h1>
         </header>
         <main>
-            <div class="criar-quizz">
+            <div class="criar-quizz hide">
                 <h2>Você não criou nenhum quizz ainda :(</h2>
-                <button>Criar Quizz</button>
+                <button onclick="criarQuizz();">Criar Quizz</button>
             </div>
 
             <section class="pessoais hide">
@@ -52,7 +52,7 @@
                 </div>
             </section>
 
-            <section class="todos">
+            <section class="todos hide">
                 <h2><strong>Todos os Quizzes</strong></h2>
                 <div class="quizzes">
                     <div class="card">
@@ -181,14 +181,14 @@
                 <div class="create-quizz hide">
                     <h2><strong>Comece pelo começo</strong></h2>
                     <div class="input-create">
-                        <input type="text" placeholder="Título do seu quizz">
-                        <input type="text" placeholder="URL da imagem do seu quizz">
-                        <input type="text" placeholder="Quantidade de perguntas do quizz">
-                        <input type="text" placeholder="Quantidade de níveis do quizz">
+                        <input type="text" placeholder="Título do seu quizz" class="title">
+                        <input type="text" placeholder="URL da imagem do seu quizz" class="urlPrin">
+                        <input type="text" placeholder="Quantidade de perguntas do quizz" class="qtdQ">
+                        <input type="text" placeholder="Quantidade de níveis do quizz" class="qtdN">
                     </div>
-                    <button>Prosseguir para criar perguntas</button>
+                    <button onclick="start();">Prosseguir para criar perguntas</button>
                 </div>
-                <div class="create-quizz tela2 hide">
+                <div class="create-quizz tela2">
                     <h2><strong>Crie suas perguntas</strong></h2>
                     <div class="input-create">
                         <h3>Pergunta 1</h3>
@@ -214,14 +214,55 @@
                     <div class="input-create">
                         <div class="titulo-pergunta">
                             <h3 style="margin: 0;">Pergunta 2</h3>
-                            <img src="./assets/Vector (1).png">
+                            <img src="./assets/Vector (1).png" onclick="abrirPergunta(this);">
+                        </div>
+                        <div class="question hide">
+                            <input type="text" placeholder="Texto da pergunta">
+                            <input type="text" placeholder="Cor de fundo da pergunta">
+                            <h3>Resposta correta</h3>
+                            <input type="text" placeholder="Resposta correta">
+                            <input type="text" placeholder="URL da imagem">
+                            <h3>Respostas incorretas</h3>
+                            <div class="incorreta">
+                                <input type="text" placeholder="Resposta incorreta 1">
+                                <input type="text" placeholder="URL da imagem 1">
+                            </div>
+                            <div class="incorreta">
+                                <input type="text" placeholder="Resposta incorreta 2">
+                                <input type="text" placeholder="URL da imagem 2">
+                            </div>
+                            <div class="incorreta">
+                                <input type="text" placeholder="Resposta incorreta 3">
+                                <input type="text" placeholder="URL da imagem 3">
+                            </div>
                         </div>
                     </div>
                     <div class="input-create">
                         <div class="titulo-pergunta">
                             <h3 style="margin: 0;">Pergunta 3</h3>
-                            <img src="./assets/Vector (1).png">
+                            <img src="./assets/Vector (1).png" onclick="abrirPergunta(this);">
                         </div>
+                        <div class="question hide">
+                            <input type="text" placeholder="Texto da pergunta">
+                            <input type="text" placeholder="Cor de fundo da pergunta">
+                            <h3>Resposta correta</h3>
+                            <input type="text" placeholder="Resposta correta">
+                            <input type="text" placeholder="URL da imagem">
+                            <h3>Respostas incorretas</h3>
+                            <div class="incorreta">
+                                <input type="text" placeholder="Resposta incorreta 1">
+                                <input type="text" placeholder="URL da imagem 1">
+                            </div>
+                            <div class="incorreta">
+                                <input type="text" placeholder="Resposta incorreta 2">
+                                <input type="text" placeholder="URL da imagem 2">
+                            </div>
+                            <div class="incorreta">
+                                <input type="text" placeholder="Resposta incorreta 3">
+                                <input type="text" placeholder="URL da imagem 3">
+                            </div>
+                        </div>
+
                     </div>
                     <button>Prosseguir para criar niveis</button>
                 </div>
@@ -267,6 +308,6 @@
 
         <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-        <script src="js/scripts.js"></script>
+        <script src="js/criarQuizz.js"></script>
     </body>
 </html>
