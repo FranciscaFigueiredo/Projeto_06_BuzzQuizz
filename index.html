@@ -12,6 +12,9 @@
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
         <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="css/responsive.css">
+        <link rel="stylesheet" href="css/perguntas.css">
+        <link rel="stylesheet" href="css/criar.css">
         
         <link rel="icon" href="assets/favicon.png">
         <title>BuzzQuizz</title>
@@ -22,23 +25,34 @@
         <header>
             <h1>BuzzQuizz</h1>
         </header>
-<div class="hide create-quizz">
-    <h2><strong>Comece pelo começo</strong></h2>
-    <div class="input-create">
-        <input type="text" placeholder="Titulo do seu quiz">
-        <input type="text" placeholder="URL da imagem do seu quizz">
-        <input type="text" placeholder="Quantidade de perguntas do quizz">
-        <input type="text" placeholder="Quantidade de níveis do quizz">
-    </div>
-    <button>Prosseguir para criar perguntas</button>
-</div>
         <main>
             <div class="criar-quizz">
                 <h2>Você não criou nenhum quizz ainda :(</h2>
                 <button>Criar Quizz</button>
             </div>
 
-            <section>
+            <section class="pessoais hide">
+                <div class="seus-quizzes">
+                    <h2><strong>Seus Quizzes</strong></h2>
+                    <ion-icon name="add-circle"></ion-icon>
+                </div>
+                <div class="quizzes">
+                    <div class="card">
+                        <img src="https://s3-alpha-sig.figma.com/img/0944/77cf/673132f4da1ae224b665fd9dfeffb556?Expires=1629676800&Signature=UJyFjmE4W52AwqZecRghettGBI4e01XihGkvwc3M6Mwql-RtEGT~KegU3DK7Tu6sMnRQv9Tq9OncpZfXALcieTQGn1lKxJ35AXkXOgNOHn~dzkumGMfcKP1HV3OsXnDFCMV~k0~IgPggJqluPE1Y0416-DvxhioPrWEgU4fl~UNoXgFyoysk5m8cKaWebt7GK0o0GqjJtt29oADiXSEHKC2MZsKSg1gWgWRCTghiNAuHYqGT24-80Lb-4r7tptohVjSnhPgvxRhP66wtX9rcvOhQ1NZ3nt~cXwi422XV1KJXsuNjkCibmoIbT624BlK-GgGOx~1yhe-aPOXLHVT8tw__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA" alt="Simpsons">
+                        <div class="titulo">
+                            <span>Acerte os personagens corretos dos Simpsons e prove seu amor</span>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="https://s3-alpha-sig.figma.com/img/0944/77cf/673132f4da1ae224b665fd9dfeffb556?Expires=1629676800&Signature=UJyFjmE4W52AwqZecRghettGBI4e01XihGkvwc3M6Mwql-RtEGT~KegU3DK7Tu6sMnRQv9Tq9OncpZfXALcieTQGn1lKxJ35AXkXOgNOHn~dzkumGMfcKP1HV3OsXnDFCMV~k0~IgPggJqluPE1Y0416-DvxhioPrWEgU4fl~UNoXgFyoysk5m8cKaWebt7GK0o0GqjJtt29oADiXSEHKC2MZsKSg1gWgWRCTghiNAuHYqGT24-80Lb-4r7tptohVjSnhPgvxRhP66wtX9rcvOhQ1NZ3nt~cXwi422XV1KJXsuNjkCibmoIbT624BlK-GgGOx~1yhe-aPOXLHVT8tw__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA" alt="Simpsons">
+                        <div class="titulo">
+                            <span>Acerte os personagens corretos dos Simpsons e prove seu amor</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="todos">
                 <h2><strong>Todos os Quizzes</strong></h2>
                 <div class="quizzes">
                     <div class="card">
@@ -79,7 +93,180 @@
                     </div>
                 </div>  
             </section>
+
+
+            <section class="perguntas-quizz hide">
+                <div class="header-quizz">
+                    <img src="https://s3-alpha-sig.figma.com/img/60f6/4bae/cb4c4e815fc36d9f0f0579a657241eba?Expires=1629676800&Signature=VDHEQKD7JSZYR~HvMhdISXty~o~Z5NYVnApYBnqc8lI5oORvE~NUAhHHQCp-gCTooHfexhnL9LJbfQLrMJjTET~dCq4UUy7ZKFY1koWwBchaldaKj7XNtnJ7dvlbbPQupzFlpfv3dXYXkF~Y32AbwtsEwmCYQ~ntmufC7ESzQLoUgne~UX5FLJM9mPdHCIspNJGFFj~SUqoVORvlDBm76ECmSjU1juFIIVQLOUhP8HIxwdHCfpe-5PTPVpFSiUKUnvXSnUIlqu0mOZAUF-tmMAmPY2uq-DpsPsfs2EEwd1RDbjKhi-KVGCOelLQQfZ1Qte2rLaOtIJ~EHmh9trdu8w__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA" alt="Harry Potter">
+                    
+                    <div class="titulo">
+                        <span>O quão Potterhead é você?</span>
+                    </div>
+                </div>
+
+                <div class="questao">
+                    <div class="pergunta">
+                        <h2>Em qual animal Olho-Tonto Moody transfigurou Malfoy?</h2>
+                    </div>
+                    <div class="respostas">
+                        <div class="resposta">
+                            <img src="https://s3-alpha-sig.figma.com/img/7212/aa92/e0229a2cb5aea15ab3fd2b5d36cb9a60?Expires=1629676800&Signature=MTCl39Vg9ghil-nb2uX0MWumubRjtgsaxHnXquuoBDYSD0IwhnkqK38vYaEl~gr17fzU64FqAvKXUfUu0mxKy2mCa2EtCHD3trzI4r97GfR85C~NWEbHDRAmPq30s2PSahhJwRZ0dFTzMQTkYVj58NvgA3tCclI~vMzl~qUQzjKiY~KTK-q7nYQpbDW3nusglVknjjjK7cM3mL9-q5nk1A0LCK874oEK8WB~ILTvIGYHe~j6rIctUfATUCa~~VnITXPOkw2DCN1ng~jTg4hUG1WLNGIo01YGIGXaEmlsqquKLPf0ZsDR7Z65aazWmXPUo7F4HoUEQ02cKrFVDLnDlg__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA" alt="Gatinho">
+                            <h3>Gatíneo</h3>
+                        </div>
+                        <div class="resposta">
+                            <img src="https://s3-alpha-sig.figma.com/img/6070/8f4d/4fe85b83d17f9b3c7faf3a738a2df140?Expires=1629676800&Signature=MDzLSbem8l3svOA5uu5BesTEChNvpztrKqRaqv3ouDkZy0XGHfKeRMAEoibcLJBz1qoVKTf19TCz7qrkwXXEiDcW98277904f5BngWspXY8YKYHplw4~sgbrk13Hpdspx2pLphyB2gsW-pCgGFdRum9BhoPAwYPvwQteTdZ2w5VBoLlwJHm7tvoxWrU50RwCeNhXUr4eJrphoCgji3LiotJKrbOHOtBV0oMrThpxNRkY9HdecA3hL5q-KAoiitzxRArSR0hAuVPYFXo-tcR~ELEhFuDrNWbHPZjrdgcSlWOvVvNcokjjzqBbuzc4lIkJSGtYJBdxF2tVqeC9TS9f9w__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA" alt="Rato">
+                            <h3>Ratata</h3>
+                        </div>
+                        <div class="resposta">
+                            <img src="https://s3-alpha-sig.figma.com/img/c7e0/64f3/0145b79667e2e9f0f8193b64984531af?Expires=1629676800&Signature=CwocLGV4-3qrAYnl4HCwRtLRzl~AspbrMRQ3ueAeJZeljjNLdVCuoTld1cJKKOPNPyV79~4YT-oKijCgETqZuhH5Vs6J15LWrDQvPn1i-NAim5HXG9K-cr~gtAH0CQye~yHLv~PEBr1OQVN7ouVyFeSaxXFpHiwgiqJobyOpkTIzw4-CS5u~qY6NBjLeSjeG0EUj~7aG402JOcqcGkiK0iBLrBeVBFxf1CfB1X8uCG6xwKRGOVD4gWRSUCerjVF-wXIgbbSJoGatLtKzkbAHsL6tojNV8EyuFKe23u2Qk7-xEBhUlOMZ4c8TkyzUaR5KcdET6tD7d83IKHiYEqEh-A__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA" alt="Sapo">
+                            <h3>Sapo gordo</h3>
+                        </div>
+                        <div class="resposta">
+                            <img src="https://s3-alpha-sig.figma.com/img/4bfb/7d5f/52d4ab9bee7b444cfed9506a1c2bc0ea?Expires=1629676800&Signature=htp5DJZeEhVTRBxtF15kuVq0uB4mbyg~Qn2TupEUq9yACH-6jDwcRLXI4qVy20x2MJbiBOAIcJi97VH1VTuerRrgwGdIa-12LrfTrLAc9BgMDLlTzSawqGUaL5-nzVYwtoJVFREda5atl5vRhQzJLm1SqPoB4VeZMiPbD35gEQ-oeY7XJTNx2jTHy11XJKukaUZQ2-IXEeYLObxfRLH9ycowPZxyInLEr4cq41wVyHdR5cW70SpLtm3B-7yGOW8Uto5bLQ1gpL6l1LoZ2B8OrHifZlmY4dg216ea9eCbKicNvfbFPKLokq3u0qOFA1DkBuDCFMJCSxxZLMephZ-Wug__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA" alt="Furão">
+                            <h3>Mustela putorius (o Furão)</h3>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="questao">
+                    <div class="pergunta">
+                        <h2>Em qual animal Olho-Tonto Moody transfigurou Malfoy?</h2>
+                    </div>
+                    <div class="respostas">
+                        <div class="resposta">
+                            <img src="https://s3-alpha-sig.figma.com/img/7212/aa92/e0229a2cb5aea15ab3fd2b5d36cb9a60?Expires=1629676800&Signature=MTCl39Vg9ghil-nb2uX0MWumubRjtgsaxHnXquuoBDYSD0IwhnkqK38vYaEl~gr17fzU64FqAvKXUfUu0mxKy2mCa2EtCHD3trzI4r97GfR85C~NWEbHDRAmPq30s2PSahhJwRZ0dFTzMQTkYVj58NvgA3tCclI~vMzl~qUQzjKiY~KTK-q7nYQpbDW3nusglVknjjjK7cM3mL9-q5nk1A0LCK874oEK8WB~ILTvIGYHe~j6rIctUfATUCa~~VnITXPOkw2DCN1ng~jTg4hUG1WLNGIo01YGIGXaEmlsqquKLPf0ZsDR7Z65aazWmXPUo7F4HoUEQ02cKrFVDLnDlg__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA" alt="Gatinho">
+                            <h3>Gatíneo</h3>
+                        </div>
+                        <div class="resposta">
+                            <img src="https://s3-alpha-sig.figma.com/img/6070/8f4d/4fe85b83d17f9b3c7faf3a738a2df140?Expires=1629676800&Signature=MDzLSbem8l3svOA5uu5BesTEChNvpztrKqRaqv3ouDkZy0XGHfKeRMAEoibcLJBz1qoVKTf19TCz7qrkwXXEiDcW98277904f5BngWspXY8YKYHplw4~sgbrk13Hpdspx2pLphyB2gsW-pCgGFdRum9BhoPAwYPvwQteTdZ2w5VBoLlwJHm7tvoxWrU50RwCeNhXUr4eJrphoCgji3LiotJKrbOHOtBV0oMrThpxNRkY9HdecA3hL5q-KAoiitzxRArSR0hAuVPYFXo-tcR~ELEhFuDrNWbHPZjrdgcSlWOvVvNcokjjzqBbuzc4lIkJSGtYJBdxF2tVqeC9TS9f9w__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA" alt="Rato">
+                            <h3>Ratata</h3>
+                        </div>
+                        <div class="resposta">
+                            <img src="https://s3-alpha-sig.figma.com/img/c7e0/64f3/0145b79667e2e9f0f8193b64984531af?Expires=1629676800&Signature=CwocLGV4-3qrAYnl4HCwRtLRzl~AspbrMRQ3ueAeJZeljjNLdVCuoTld1cJKKOPNPyV79~4YT-oKijCgETqZuhH5Vs6J15LWrDQvPn1i-NAim5HXG9K-cr~gtAH0CQye~yHLv~PEBr1OQVN7ouVyFeSaxXFpHiwgiqJobyOpkTIzw4-CS5u~qY6NBjLeSjeG0EUj~7aG402JOcqcGkiK0iBLrBeVBFxf1CfB1X8uCG6xwKRGOVD4gWRSUCerjVF-wXIgbbSJoGatLtKzkbAHsL6tojNV8EyuFKe23u2Qk7-xEBhUlOMZ4c8TkyzUaR5KcdET6tD7d83IKHiYEqEh-A__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA" alt="Sapo">
+                            <h3>Sapo gordo</h3>
+                        </div>
+                        <div class="resposta">
+                            <img src="https://s3-alpha-sig.figma.com/img/4bfb/7d5f/52d4ab9bee7b444cfed9506a1c2bc0ea?Expires=1629676800&Signature=htp5DJZeEhVTRBxtF15kuVq0uB4mbyg~Qn2TupEUq9yACH-6jDwcRLXI4qVy20x2MJbiBOAIcJi97VH1VTuerRrgwGdIa-12LrfTrLAc9BgMDLlTzSawqGUaL5-nzVYwtoJVFREda5atl5vRhQzJLm1SqPoB4VeZMiPbD35gEQ-oeY7XJTNx2jTHy11XJKukaUZQ2-IXEeYLObxfRLH9ycowPZxyInLEr4cq41wVyHdR5cW70SpLtm3B-7yGOW8Uto5bLQ1gpL6l1LoZ2B8OrHifZlmY4dg216ea9eCbKicNvfbFPKLokq3u0qOFA1DkBuDCFMJCSxxZLMephZ-Wug__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA" alt="Furão">
+                            <h3>Mustela putorius (o Furão)</h3>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="questao">
+                    <div class="pergunta">
+                        <h2>Em qual animal Olho-Tonto Moody transfigurou Malfoy?</h2>
+                    </div>
+                    <div class="respostas">
+                        <div class="resposta">
+                            <img src="https://s3-alpha-sig.figma.com/img/7212/aa92/e0229a2cb5aea15ab3fd2b5d36cb9a60?Expires=1629676800&Signature=MTCl39Vg9ghil-nb2uX0MWumubRjtgsaxHnXquuoBDYSD0IwhnkqK38vYaEl~gr17fzU64FqAvKXUfUu0mxKy2mCa2EtCHD3trzI4r97GfR85C~NWEbHDRAmPq30s2PSahhJwRZ0dFTzMQTkYVj58NvgA3tCclI~vMzl~qUQzjKiY~KTK-q7nYQpbDW3nusglVknjjjK7cM3mL9-q5nk1A0LCK874oEK8WB~ILTvIGYHe~j6rIctUfATUCa~~VnITXPOkw2DCN1ng~jTg4hUG1WLNGIo01YGIGXaEmlsqquKLPf0ZsDR7Z65aazWmXPUo7F4HoUEQ02cKrFVDLnDlg__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA" alt="Gatinho">
+                            <h3>Gatíneo</h3>
+                        </div>
+                        <div class="resposta">
+                            <img src="https://s3-alpha-sig.figma.com/img/6070/8f4d/4fe85b83d17f9b3c7faf3a738a2df140?Expires=1629676800&Signature=MDzLSbem8l3svOA5uu5BesTEChNvpztrKqRaqv3ouDkZy0XGHfKeRMAEoibcLJBz1qoVKTf19TCz7qrkwXXEiDcW98277904f5BngWspXY8YKYHplw4~sgbrk13Hpdspx2pLphyB2gsW-pCgGFdRum9BhoPAwYPvwQteTdZ2w5VBoLlwJHm7tvoxWrU50RwCeNhXUr4eJrphoCgji3LiotJKrbOHOtBV0oMrThpxNRkY9HdecA3hL5q-KAoiitzxRArSR0hAuVPYFXo-tcR~ELEhFuDrNWbHPZjrdgcSlWOvVvNcokjjzqBbuzc4lIkJSGtYJBdxF2tVqeC9TS9f9w__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA" alt="Rato">
+                            <h3>Ratata</h3>
+                        </div>
+                        <div class="resposta">
+                            <img src="https://s3-alpha-sig.figma.com/img/c7e0/64f3/0145b79667e2e9f0f8193b64984531af?Expires=1629676800&Signature=CwocLGV4-3qrAYnl4HCwRtLRzl~AspbrMRQ3ueAeJZeljjNLdVCuoTld1cJKKOPNPyV79~4YT-oKijCgETqZuhH5Vs6J15LWrDQvPn1i-NAim5HXG9K-cr~gtAH0CQye~yHLv~PEBr1OQVN7ouVyFeSaxXFpHiwgiqJobyOpkTIzw4-CS5u~qY6NBjLeSjeG0EUj~7aG402JOcqcGkiK0iBLrBeVBFxf1CfB1X8uCG6xwKRGOVD4gWRSUCerjVF-wXIgbbSJoGatLtKzkbAHsL6tojNV8EyuFKe23u2Qk7-xEBhUlOMZ4c8TkyzUaR5KcdET6tD7d83IKHiYEqEh-A__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA" alt="Sapo">
+                            <h3>Sapo gordo</h3>
+                        </div>
+                        <div class="resposta">
+                            <img src="https://s3-alpha-sig.figma.com/img/4bfb/7d5f/52d4ab9bee7b444cfed9506a1c2bc0ea?Expires=1629676800&Signature=htp5DJZeEhVTRBxtF15kuVq0uB4mbyg~Qn2TupEUq9yACH-6jDwcRLXI4qVy20x2MJbiBOAIcJi97VH1VTuerRrgwGdIa-12LrfTrLAc9BgMDLlTzSawqGUaL5-nzVYwtoJVFREda5atl5vRhQzJLm1SqPoB4VeZMiPbD35gEQ-oeY7XJTNx2jTHy11XJKukaUZQ2-IXEeYLObxfRLH9ycowPZxyInLEr4cq41wVyHdR5cW70SpLtm3B-7yGOW8Uto5bLQ1gpL6l1LoZ2B8OrHifZlmY4dg216ea9eCbKicNvfbFPKLokq3u0qOFA1DkBuDCFMJCSxxZLMephZ-Wug__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA" alt="Furão">
+                            <h3>Mustela putorius (o Furão)</h3>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+            <section class="fazer-quiz">
+                <div class="create-quizz hide">
+                    <h2><strong>Comece pelo começo</strong></h2>
+                    <div class="input-create">
+                        <input type="text" placeholder="Título do seu quizz">
+                        <input type="text" placeholder="URL da imagem do seu quizz">
+                        <input type="text" placeholder="Quantidade de perguntas do quizz">
+                        <input type="text" placeholder="Quantidade de níveis do quizz">
+                    </div>
+                    <button>Prosseguir para criar perguntas</button>
+                </div>
+                <div class="create-quizz tela2 hide">
+                    <h2><strong>Crie suas perguntas</strong></h2>
+                    <div class="input-create">
+                        <h3>Pergunta 1</h3>
+                        <input type="text" placeholder="Texto da pergunta">
+                        <input type="text" placeholder="Cor de fundo da pergunta">
+                        <h3>Resposta correta</h3>
+                        <input type="text" placeholder="Resposta correta">
+                        <input type="text" placeholder="URL da imagem">
+                        <h3>Respostas incorretas</h3>
+                        <div class="incorreta">
+                            <input type="text" placeholder="Resposta incorreta 1">
+                            <input type="text" placeholder="URL da imagem 1">
+                        </div>
+                        <div class="incorreta">
+                            <input type="text" placeholder="Resposta incorreta 2">
+                            <input type="text" placeholder="URL da imagem 2">
+                        </div>
+                        <div class="incorreta">
+                            <input type="text" placeholder="Resposta incorreta 3">
+                            <input type="text" placeholder="URL da imagem 3">
+                        </div>
+                    </div>
+                    <div class="input-create">
+                        <div class="titulo-pergunta">
+                            <h3 style="margin: 0;">Pergunta 2</h3>
+                            <img src="./assets/Vector (1).png">
+                        </div>
+                    </div>
+                    <div class="input-create">
+                        <div class="titulo-pergunta">
+                            <h3 style="margin: 0;">Pergunta 3</h3>
+                            <img src="./assets/Vector (1).png">
+                        </div>
+                    </div>
+                    <button>Prosseguir para criar niveis</button>
+                </div>
+                <div class="create-quizz tela3 hide">
+                    <h2>Agora, decida os niveis</h2>
+                    <div class="input-create">
+                        <h3>Nível 1</h3>
+                        <input type="text" placeholder="Título do nível">
+                        <input type="text" placeholder="% de acerto mínima">
+                        <input type="text" placeholder="URL da imagem do nível">
+                        <textarea name="descricao" id="" cols="30" rows="10" placeholder="Descrição do nível"></textarea>
+                    </div>
+                    <div class="input-create">
+                        <div class="titulo-pergunta">
+                            <h3 style="margin:0">Nível 2</h3>
+                            <img src="./assets/Vector (1).png">
+                        </div>
+                    </div>
+                    <div class="input-create">
+                        <div class="titulo-pergunta">
+                            <h3 style="margin: 0;">Nível 3</h3>
+                            <img src="./assets/Vector (1).png">
+                        </div>
+                    </div>
+                    <button>Finalizar Quizz</button>
+                </div>
+                <div class="create-quizz tela4 hide">
+                    <h2>Seu quizz está pronto!</h2>
+                    <div class="card2">
+                        <img src="https://s3-alpha-sig.figma.com/img/60f6/4bae/cb4c4e815fc36d9f0f0579a657241eba?Expires=1629676800&Signature=VDHEQKD7JSZYR~HvMhdISXty~o~Z5NYVnApYBnqc8lI5oORvE~NUAhHHQCp-gCTooHfexhnL9LJbfQLrMJjTET~dCq4UUy7ZKFY1koWwBchaldaKj7XNtnJ7dvlbbPQupzFlpfv3dXYXkF~Y32AbwtsEwmCYQ~ntmufC7ESzQLoUgne~UX5FLJM9mPdHCIspNJGFFj~SUqoVORvlDBm76ECmSjU1juFIIVQLOUhP8HIxwdHCfpe-5PTPVpFSiUKUnvXSnUIlqu0mOZAUF-tmMAmPY2uq-DpsPsfs2EEwd1RDbjKhi-KVGCOelLQQfZ1Qte2rLaOtIJ~EHmh9trdu8w__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA" alt="Simpsons">
+                        <div class="titulo">
+                            <span>O quão Potterhead é você?</span>
+                        </div>
+                    </div>
+                    <button>Acessar quizz</button>
+                    <a href="">Voltar para home</a>
+                </div>
+            </section>
         </main>
+
+
+        <footer></footer>
+
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
         <script src="js/scripts.js"></script>
     </body>
 </html>

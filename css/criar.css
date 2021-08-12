@@ -1,0 +1,167 @@
+
+h1,h2,h3 {
+    font-weight: bold;
+    font-family: 'Roboto',sans-serif;
+}
+
+
+h3 { 
+    font-size: 20px;
+}
+
+h2 {
+    font-size: 23px;
+}
+
+.create-quizz {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    margin-top: 120px;
+    align-items: center;
+}
+.create-quizz h2 {
+    font-family: 'Roboto',sans-serif;
+}
+.input-create {
+    margin-top: 20px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    width: 40vw;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05);
+}
+
+.input-create input {
+    height: 46px;
+    margin-bottom: 10px;
+    border: 1px solid #D1D1D1;
+    border-radius: 5px;
+    padding: 15px;
+    
+}
+
+.input-create h3 {
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+.incorreta {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.input-create input::placeholder{
+    color: #bababa;
+    font-style: italic;
+    font-family: 'Roboto',sans-serif;
+    font-size: 19px;
+}
+.input-create img {
+    width: 26px;
+    height: 23px;
+}
+
+.input-create textarea {
+    border: 1px solid #D1D1D1;
+    border-radius: 5px;
+    padding: 15px;
+    height: 46px;
+    overflow: hidden;
+}
+
+.input-create textarea::placeholder{
+    color: #bababa;
+    font-style: italic;
+    font-family: 'Roboto',sans-serif;
+    font-size: 19px;
+    text-align: start
+}
+.create-quizz button {
+    width: 368px;
+    height: 54px;
+    margin-top: 60px;
+    color: white;
+    font-size: 21px;
+
+    border: 1px solid #ec362d;
+    border-style: dashed;
+    border-radius: 15px;
+    
+    background-color: #ec362d;
+}
+
+.titulo-pergunta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card2 {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    width: 30vw;
+    height: 266px;
+    position: relative;
+  
+}
+.card2 span {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    font-size: 23px;
+}
+.card2 img {
+    width: 30vw;
+    height: 266px;
+    border-radius: 5px;
+} 
+
+.create-quizz.tela4 button{
+    width: 15vw;
+    height: 40px;
+}
+
+.create-quizz.tela4 a {
+    margin-top: 20px;
+    text-decoration: none;
+    color: #818181;
+    font-size: 21px;
+    font-family: 'Roboto',sans-serif;
+}
+.hide{
+    display: none;
+}
+
+
+@media (max-width: 1100px){
+    .input-create{
+        width: 100vw;
+    }
+    .create-quizz button {
+        width: 90vw;
+    }
+
+    .input-create textarea {
+        height: 177px;
+    }
+    
+    .card2{
+        width: 90vw;
+        height: 181px;
+    }
+    .card2 img {
+        width: 90vw;
+        height: 181px;
+    }
+    .create-quizz.tela4 button {
+        width: 60vw;
+        margin-top: 10px;
+    }
+
+    .create-quizz.tela4 a {
+        font-size: 18px;
+    }
+    
+}

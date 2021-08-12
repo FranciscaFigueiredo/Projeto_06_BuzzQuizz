@@ -1,6 +1,7 @@
 * {
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
+    line-height: 24px;
 }
 
 h1 {
@@ -46,12 +47,15 @@ header {
 
 main {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    /* flex-direction: column; */
     justify-content: center;
     align-items: center;
 }
-section {
+.todos {
     width: 80vw;
+
+    margin-bottom: 40px;
 }
 
 .criar-quizz {
@@ -70,7 +74,7 @@ section {
     justify-content: space-around;
     align-items: center;
 
-    margin: 100px auto 40px;
+    margin: 120px auto 40px;
 }
 
 .criar-quizz h2 {
@@ -78,10 +82,11 @@ section {
 }
 
 .criar-quizz button {
-    width: 40vw;
-    height: 40px;
+    width: 15vw;
+    height: 50px;
 
     color: #ec362d;
+    font-size: 20px;
 
     border: 1px solid #ec362d;
     border-style: dashed;
@@ -90,11 +95,21 @@ section {
     background-color: #fafafa;
 }
 
+.quizzes {
+    width: 80vw;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
 .card {
-    width: 25vw;
+    width: 24vw;
     height: 181px;
+
     position: relative;
-    margin-top: 20px;
+    margin: 10px 15px;
 }
 
 .card img {
@@ -117,66 +132,45 @@ section {
     align-items: flex-end;
     justify-content: center;
 
+    border-radius: 5px;
     background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 64.58%, #000000 100%);
 }
 
 .titulo span {
     bottom: 0;
-    right: 2px;
+    left: 0;
 
     padding: 10px;
+    text-align:start;
 }
 
-.quizzes {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
+
+.seus-quizzes {
     width: 80vw;
-}
 
-
-.create-quizz {
     display: flex;
-    flex-direction: column;
-    width: 100vw;
-    margin-top: 120px;
+    justify-content: flex-start;
     align-items: center;
 }
-.create-quizz h2 {
-    font-family: 'Roboto',sans-serif;
-}
-.input-create {
-    margin-top: 20px;
-    background-color: #ffffff;
-    display: flex;
-    flex-direction: column;
-    width: 40vw;
-    height: 256px;
-    padding: 20px;
+
+.seus-quizzes ion-icon {
+    width: 30px;
+    height: 30px;
+
+    color: #ec362d;
+
+    margin-left: 15px;
 }
 
-.input-create input {
-    height: 46px;
-    margin-bottom: 10px;
-    border: 1px solid #D1D1D1;
-    box-sizing: border-box;
-    border-radius: 5px;
+.pessoais {
+    margin-top: 120px;
 }
 
-.create-quizz button {
-    width: 20vw;
-    height: 40px;
-    margin-top: 60px;
-    color: white;
-
-    border: 1px solid #ec362d;
-    border-style: dashed;
-    border-radius: 15px;
-    
-    background-color: #ec362d;
-}
 .hide {
     display: none;
-}    
+}
 
+footer {
+    width: 100vw;
+    height: 100px;
+}
