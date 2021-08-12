@@ -47,11 +47,12 @@ header {
 
 main {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    /* flex-direction: column; */
     justify-content: center;
     align-items: center;
 }
-section {
+.todos {
     width: 80vw;
 
     margin-bottom: 40px;
@@ -81,10 +82,11 @@ section {
 }
 
 .criar-quizz button {
-    width: 10vw;
-    height: 40px;
+    width: 15vw;
+    height: 50px;
 
     color: #ec362d;
+    font-size: 20px;
 
     border: 1px solid #ec362d;
     border-style: dashed;
@@ -93,12 +95,21 @@ section {
     background-color: #fafafa;
 }
 
+.quizzes {
+    width: 80vw;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
 .card {
-    width: 25vw;
+    width: 24vw;
     height: 181px;
 
     position: relative;
-    margin: 20px 20px 0 0;
+    margin: 10px 15px;
 }
 
 .card img {
@@ -127,18 +138,10 @@ section {
 
 .titulo span {
     bottom: 0;
-    right: 2px;
+    left: 0;
 
     padding: 10px;
-}
-
-.quizzes {
-    width: 80vw;
-
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: flex-start;
+    text-align:start;
 }
 
 .create-quizz {
@@ -165,7 +168,6 @@ section {
     height: 46px;
     margin-bottom: 10px;
     border: 1px solid #D1D1D1;
-    box-sizing: border-box;
     border-radius: 5px;
 }
 

@@ -1,0 +1,59 @@
+@media (max-width: 600px) {
+    
+    section {
+        width: 90vw;
+    }
+
+    .criar-quizz {
+        width: 90vw;
+        margin: 100px auto 40px;
+    }
+
+    .criar-quizz button {
+        width: 40vw;
+        height: 40px;
+    }
+
+    .card {
+        width: 90vw;
+        margin: 0 auto;
+    }
+
+    .card img {
+        width: 90vw;
+    }
+
+    .quizzes {
+        width: 90vw;    
+    }
+}
+
+@media (max-width: 1100px) {
+    
+    section {
+        width: 90vw;
+    }
+    
+    .criar-quizz {
+        width: 90vw;
+        margin: 100px auto 40px;
+    }
+
+    .criar-quizz button {
+        width: 15vw;
+        height: 45px;
+    }
+
+    .card {
+        width: 42vw;
+        margin: 15px auto;
+    }
+
+    .quizzes {
+        width: 90vw;    
+    }
+    
+    .card img {
+        width: 42vw;
+    }
+}
