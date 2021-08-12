@@ -135,10 +135,6 @@ section {
     width: 80vw;
 }
 
-.hide {
-    display: none !important;
-}    
-
 
 .create-quizz {
     display: flex;
@@ -180,3 +176,7 @@ section {
     
     background-color: #ec362d;
 }
+.hide {
+    display: none;
+}    
+
