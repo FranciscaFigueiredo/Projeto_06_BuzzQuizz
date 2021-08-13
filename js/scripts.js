@@ -6,13 +6,11 @@ function pegarQuizzes() {
 }
 
 function listarQuizzes(quizzes) {
-
-    console.log(quizzes)
     let listaQuizzes = document.querySelector(".todos .quizzes");
     listaQuizzes.innerHTML = "";
     
     for (let i = 0; i < quizzes.data.length; i++) {
-        listaQuizzes.innerHTML += `<div class="card" onclick="abrirQuizz(this);">
+        listaQuizzes.innerHTML += `<div class="card" onclick="verQuizzes(${i});">
                                     <img src="${quizzes.data[i].image}">
                                     <div class="titulo">
                                         <span>${quizzes.data[i].title}</span>
