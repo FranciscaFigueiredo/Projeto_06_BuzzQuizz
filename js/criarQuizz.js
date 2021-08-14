@@ -5,24 +5,56 @@ let quantidadePerguntas;
 let quantidadeNiveis;
 let quizz = {};
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 const tela2 = document.querySelector(".tela2");
 const tela1 = document.querySelector(".create-quizz");
+
+function paginaCriacaoQuizz(quizz) {
+
+    for (let i = 1; i < quantidadePerguntas; i++) {
+        console.log(quantidadePerguntas, quantidadeNiveis);
+        tela2.innerHTML += `<div class="input-create">
+                                <div class="titulo-pergunta">
+                                    <h3 style="margin: 0;">Pergunta ${i+1}</h3>
+                                    <img src="./assets/Vector (1).png" onclick="abrirPergunta(this);">
+                                </div>
+                                <div class="question hide">
+                                    <input type="text" placeholder="Texto da pergunta" class="textP2">
+                                    <input type="text" placeholder="Cor de fundo da pergunta" class="colorP2">
+                                    <h3>Resposta correta</h3>
+                                    <input type="text" placeholder="Resposta correta" class="correctP2">
+                                    <input type="text" placeholder="URL da imagem" class="correctURL-P2">
+                                    <h3>Respostas incorretas</h3>
+                                    <div class="incorreta">
+                                        <input type="text" placeholder="Resposta incorreta 1" class="incorrectP2-1">
+                                        <input type="text" placeholder="URL da imagem 1" class="incorrectP2-1URL">
+                                    </div>
+                                    <div class="incorreta">
+                                        <input type="text" placeholder="Resposta incorreta 2" class="incorrectP2-2">
+                                        <input type="text" placeholder="URL da imagem 2" class="incorrectP2-2URL">
+                                    </div>
+                                    <div class="incorreta">
+                                        <input type="text" placeholder="Resposta incorreta 3" class="incorrectP2-3">
+                                        <input type="text" placeholder="URL da imagem 3" class="incorrectP2-3URL">
+                                    </div>
+                                </div>
+                            </div>`;
+    }
+    tela2.innerHTML += `<button onclick="criarPerguntas();">Prosseguir para criar niveis</button>`
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 function criarQuizz (){
     const section = document.querySelector(".fazer-quiz");
@@ -37,11 +69,11 @@ function start(){
     URLimagemPrincipal= document.querySelector(".urlPrin").value;
     quantidadePerguntas = Number(document.querySelector(".qtdQ").value);
     quantidadeNiveis = Number(document.querySelector(".qtdN").value);
-    console.log(typeof quantidadePerguntas, typeof quantidadeNiveis);
+    console.log(quantidadePerguntas, quantidadeNiveis);
     if (titulo === '' || URLimagemPrincipal === '' || quantidadePerguntas === '' || quantidadeNiveis === ''){
         alert("Impossível continuar, campo vazio");
     }
-    else if(quantidadePerguntas > 3 && quantidadePerguntas < 2){
+    else if(quantidadePerguntas < 3 || isNaN(quantidadePerguntas)){
         alert("Quantidade de perguntas ou níveis invalida")
     } 
     else {
@@ -49,7 +81,7 @@ function start(){
         tela2.classList.remove("hide");
     }
     // Falta verificar se foi digitado numeros 
-
+    paginaCriacaoQuizz();
 }
 
 

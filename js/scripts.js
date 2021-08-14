@@ -10,7 +10,7 @@ function listarQuizzes(quizzes) {
     listaQuizzes.innerHTML = "";
     
     for (let i = 0; i < quizzes.data.length; i++) {
-        listaQuizzes.innerHTML += `<div class="card" onclick="verQuizzes(${i});">
+        listaQuizzes.innerHTML += `<div class="card" onclick="verQuizzes(${i+1});">
                                     <img src="${quizzes.data[i].image}">
                                     <div class="titulo">
                                         <span>${quizzes.data[i].title}</span>
