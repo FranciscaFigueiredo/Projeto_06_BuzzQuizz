@@ -136,6 +136,12 @@ h2 {
     font-size: 21px;
     font-family: 'Roboto',sans-serif;
 }
+
+.level {
+    display: flex;
+    flex-direction: column;
+}
+
 .hide{
     display: none;
 }

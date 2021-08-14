@@ -7,6 +7,7 @@ let quizz = {};
 
 const tela2 = document.querySelector(".tela2");
 const tela1 = document.querySelector(".create-quizz");
+const tela3 = document.querySelector(".tela3");
 
 function paginaCriacaoQuizz(quizz) {
 
@@ -69,13 +70,16 @@ function start(){
     URLimagemPrincipal= document.querySelector(".urlPrin").value;
     quantidadePerguntas = Number(document.querySelector(".qtdQ").value);
     quantidadeNiveis = Number(document.querySelector(".qtdN").value);
-    console.log(quantidadePerguntas, quantidadeNiveis);
+    console.log(titulo.length);
     if (titulo === '' || URLimagemPrincipal === '' || quantidadePerguntas === '' || quantidadeNiveis === ''){
         alert("Impossível continuar, campo vazio");
     }
     else if(quantidadePerguntas < 3 || isNaN(quantidadePerguntas)){
-        alert("Quantidade de perguntas ou níveis invalida")
+        alert("Quantidade de perguntas ou níveis invalida");
     } 
+    else if((titulo.length < 20 || titulo.length > 65) || !URLimagemPrincipal.includes("https:") ){
+        alert("Título ou URL invalida");
+    }
     else {
         tela1.classList.add("hide");
         tela2.classList.remove("hide");
@@ -103,7 +107,7 @@ function criarPerguntas(){
     let incorretaP1_1 = document.querySelector(".incorrectP1-1").value;
     let incorretaP1_1URL = document.querySelector(".incorrectP1-1URL").value;
     
-    
+   
     
     let textoP2 = document.querySelector(".textP2").value;
     let corfundoP2 = document.querySelector(".colorP2") .value;
@@ -121,6 +125,27 @@ function criarPerguntas(){
     let incorretaP3_1 = document.querySelector(".incorrectP3-1").value;
     let incorretaP3_1URL = document.querySelector(".incorrectP3-1URL").value;
 
+    let URLS = [urlCorretaP1,urlCorretaP2,urlCorretaP3,incorretaP1_1URL,incorretaP2_1URL,incorretaP3_1URL];
+
+    let cont = 0;
+    if(textoP1 === '' || textoP2 === '' || textoP3 === '' || corretaP1 === '' || corretaP2 === '' ||corretaP3 === ''){
+        alert("Impossível continuar, campo vazio");
+        return;
+    }
+    for(let i =0 ;i < URLS.length;i++){
+       if( !URLS[i].includes("https:")){
+           cont++;
+       } 
+    }
+    if(cont > 0){
+        alert(`${cont} URLS inválidas`)
+        return;
+    }
+
+    if (textoP1.length < 20 || textoP2.length < 20  || textoP3.length < 20 ){
+        alert("Texto da pergunta deve ter no mínimo 20 caracteres");
+        return;
+    }
     quizz = {
         title: titulo,
         image: URLimagemPrincipal,
@@ -189,6 +214,40 @@ function criarPerguntas(){
             }
         ]
     }
-    
-console.log(quizz);
+   
+}
+
+function abrirLVL(lvl){
+    const div = lvl.parentNode;   
+    const pai = div.parentNode; 
+    const nivel = pai.querySelector(".level");
+    nivel.classList.toggle("hide");
+}
+
+
+function finalizarQuizz(){
+
+    let tituloLevel1 = document.querySelector(".lvlTitle1").value;
+    let acerto1 = document.querySelector(".%acerto1").value;
+    let url1 = document.querySelector("URLlvl1").value;
+    let desc1 = document.querySelector(".descLVL1").value;
+    let tituloLevel2 = document.querySelector(".lvlTitle1").value;
+    let acerto2 = document.querySelector(".%acerto1").value;
+    let url2 = document.querySelector("URLlvl1").value;
+    let desc2 = document.querySelector(".descLVL1").value;
+    // let tituloLevel3 = document.querySelector(".lvlTitle1").value;
+    // let acerto3 = document.querySelector(".%acerto1").value;
+    // let url3 = document.querySelector("URLlvl1").value;
+    // let desc3 = document.querySelector(".descLVL1").value;
+
+    if(tituloLevel1.length < 10 || tituloLevel2.length < 10){
+        alert("Titulo deve ser maior que 10 caracteres");
+        return;
+    }
+    if ((Number(acerto1) < 0 || Number(acerto1) > 100) || (Number(acerto2) < 0 || Number(acerto3) > 100)){
+        alert("Porcentagem invalida");
+        return;
+    }
+
+
 }

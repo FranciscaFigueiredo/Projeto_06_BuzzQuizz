@@ -183,10 +183,10 @@
                 <div class="card-content">
                     <img src="https://s3-alpha-sig.figma.com/img/631a/90ad/6e791fb8c2ec5406e4758e5bda613e7c?Expires=1629676800&Signature=b66Rd0G-53ndquIR65vjtFAqz0ZcS-c5TyGdoQbVX3wRrJ3dzIGCNBgZ8o8QX~92l1zbMZP3bZXNJsXqs3iAjLc9I52g9RzMcQCqZmNuKYNxKTaPPSHr787rtgLtpMkpgvNuzCmbCb4NWFK9M0qU2BtVwPJfe-XHz44XTmL9ksGy1E-Gk3kvbFhX-nJtp2UpfIKkwcr4gH7tXkxs7vVhmElEpujGGuidiooZT87NoIx3BPrRUEWA-C4qPEsVYauaPMUoGWZy5Pl30Dwmp2jFuQQXThvEg1ueLK4qpFlnbmGRRze7xE-ebTJsbp71TK3jSnR6wAQ5RYI~pS9HqJcy2g__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA">
                     <p><strong>Parabéns Potterhead! Bem-vindx a Hogwarts, aproveite o loop infinito de comida e clique no botão abaixo para usar o vira-tempo e reiniciar este teste.</strong></p>
-                </div>
+                </div>  
             </section>
             <section class="fazer-quiz">
-                <div class="create-quizz">
+                <div class="create-quizz hide">
                     <h2><strong>Comece pelo começo</strong></h2>
                     <div class="input-create">
                         <input type="text" placeholder="Título do seu quizz" class="title">
@@ -204,22 +204,22 @@
                         <input type="text" placeholder="Cor de fundo da pergunta" class="colorP1">
                         <h3>Resposta correta</h3>
                         <input type="text" placeholder="Resposta correta" class="correctP1">
-                        <input type="text" placeholder="URL da imagem" class="correctURL-P1">
+                        <input type="url" placeholder="URL da imagem" class="correctURL-P1">
                         <h3>Respostas incorretas</h3>
                         <div class="incorreta">
                             <input type="text" placeholder="Resposta incorreta 1" class="incorrectP1-1">
-                            <input type="text" placeholder="URL da imagem 1"  class="incorrectP1-1URL">
+                            <input type="url" placeholder="URL da imagem 1"  class="incorrectP1-1URL">
                         </div>
                         <div class="incorreta">
                             <input type="text" placeholder="Resposta incorreta 2" class="incorrectP1-2">
-                            <input type="text" placeholder="URL da imagem 2"  class="incorrectP1-2URL">
+                            <input type="url" placeholder="URL da imagem 2"  class="incorrectP1-2URL">
                         </div>
                         <div class="incorreta">
                             <input type="text" placeholder="Resposta incorreta 3" class="incorrectP1-3">
-                            <input type="text" placeholder="URL da imagem 3"  class="incorrectP1-3URL">
+                            <input type="url" placeholder="URL da imagem 3"  class="incorrectP1-3URL">
                         </div>
                     </div>
-                    <!-- <div class="input-create">
+                    <div class="input-create">
                         <div class="titulo-pergunta">
                             <h3 style="margin: 0;">Pergunta 2</h3>
                             <img src="./assets/Vector (1).png" onclick="abrirPergunta(this);">
@@ -229,19 +229,19 @@
                             <input type="text" placeholder="Cor de fundo da pergunta" class="colorP2">
                             <h3>Resposta correta</h3>
                             <input type="text" placeholder="Resposta correta" class="correctP2">
-                            <input type="text" placeholder="URL da imagem" class="correctURL-P2">
+                            <input type="url" placeholder="URL da imagem" class="correctURL-P2">
                             <h3>Respostas incorretas</h3>
                             <div class="incorreta">
                                 <input type="text" placeholder="Resposta incorreta 1" class="incorrectP2-1">
-                                <input type="text" placeholder="URL da imagem 1" class="incorrectP2-1URL">
+                                <input type="url" placeholder="URL da imagem 1" class="incorrectP2-1URL">
                             </div>
                             <div class="incorreta">
                                 <input type="text" placeholder="Resposta incorreta 2" class="incorrectP2-2">
-                                <input type="text" placeholder="URL da imagem 2" class="incorrectP2-2URL">
+                                <input type="url" placeholder="URL da imagem 2" class="incorrectP2-2URL">
                             </div>
                             <div class="incorreta">
                                 <input type="text" placeholder="Resposta incorreta 3" class="incorrectP2-3">
-                                <input type="text" placeholder="URL da imagem 3" class="incorrectP2-3URL">
+                                <input type="url" placeholder="URL da imagem 3" class="incorrectP2-3URL">
                             </div>
                         </div>
                     </div>
@@ -255,47 +255,59 @@
                             <input type="text" placeholder="Cor de fundo da pergunta" class="colorP3">
                             <h3>Resposta correta</h3>
                             <input type="text" placeholder="Resposta correta" class="correctP3">
-                            <input type="text" placeholder="URL da imagem" class="correctURL-P3">
+                            <input type="url" placeholder="URL da imagem" class="correctURL-P3">
                             <h3>Respostas incorretas</h3>
                             <div class="incorreta">
                                 <input type="text" placeholder="Resposta incorreta 1" class="incorrectP3-1">
-                                <input type="text" placeholder="URL da imagem 1" class="incorrectP3-1URL">
+                                <input type="url" placeholder="URL da imagem 1" class="incorrectP3-1URL">
                             </div>
                             <div class="incorreta">
                                 <input type="text" placeholder="Resposta incorreta 2" class="incorrectP3-2">
-                                <input type="text" placeholder="URL da imagem 2" class="incorrectP3-2URL">
+                                <input type="url" placeholder="URL da imagem 2" class="incorrectP3-2URL">
                             </div>
                             <div class="incorreta">
                                 <input type="text" placeholder="Resposta incorreta 3" class="incorrectP3-3">
-                                <input type="text" placeholder="URL da imagem 3" class="incorrectP3-3URL">
+                                <input type="url" placeholder="URL da imagem 3" class="incorrectP3-3URL">
                             </div>
                         </div>
 
-                    </div> -->
-                    <!-- <button onclick="criarPerguntas();">Prosseguir para criar niveis</button> -->
+                    </div>
+                    <button onclick="criarPerguntas();">Prosseguir para criar niveis</button>
                 </div>
-                <div class="create-quizz tela3 hide">
+                <div class="create-quizz tela3">
                     <h2>Agora, decida os niveis</h2>
                     <div class="input-create">
                         <h3>Nível 1</h3>
-                        <input type="text" placeholder="Título do nível">
-                        <input type="text" placeholder="% de acerto mínima">
-                        <input type="text" placeholder="URL da imagem do nível">
-                        <textarea name="descricao" id="" cols="30" rows="10" placeholder="Descrição do nível"></textarea>
+                        <input type="text" placeholder="Título do nível" class="lvlTitle1">
+                        <input type="text" placeholder="% de acerto mínima" class="%acerto1">
+                        <input type="url" placeholder="URL da imagem do nível" class="URLlvl1">
+                        <textarea name="descricao" id="" cols="30" rows="10" placeholder="Descrição do nível" class="descLVL1"></textarea>
                     </div>
                     <div class="input-create">
-                        <div class="titulo-pergunta">
+                        <div class="titulo-pergunta">   
                             <h3 style="margin:0">Nível 2</h3>
-                            <img src="./assets/Vector (1).png">
+                            <img src="./assets/Vector (1).png" onclick="abrirLVL(this);">
+                        </div>
+                        <div class="level hide">
+                            <input type="text" placeholder="Título do nível" class="lvlTitle2">
+                            <input type="text" placeholder="% de acerto mínima" class="%acerto2">
+                            <input type="url" placeholder="URL da imagem do nível" class="URLlvl2">
+                            <textarea name="descricao" id="" cols="30" rows="10" placeholder="Descrição do nível" class="descLVL2"></textarea>
                         </div>
                     </div>
                     <div class="input-create">
                         <div class="titulo-pergunta">
                             <h3 style="margin: 0;">Nível 3</h3>
-                            <img src="./assets/Vector (1).png">
+                            <img src="./assets/Vector (1).png" onclick="abrirLVL(this);">
+                        </div>
+                        <div class="level hide">
+                            <input type="text" placeholder="Título do nível" class="lvlTitle3">
+                            <input type="text" placeholder="% de acerto mínima" class="%acerto3">
+                            <input type="url" placeholder="URL da imagem do nível" class="URLlvl3">
+                            <textarea name="descricao" id="" cols="30" rows="10" placeholder="Descrição do nível" class="descLVL3"></textarea>
                         </div>
                     </div>
-                    <button>Finalizar Quizz</button>
+                    <button onclick="finalizarQuizz()">Finalizar Quizz</button>
                 </div>
                 <div class="create-quizz tela4 hide">
                     <h2>Seu quizz está pronto!</h2>
