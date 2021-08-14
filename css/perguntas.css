@@ -37,8 +37,11 @@
 }
 
 .questao {
-    width: 760px;
-    height: 680px;
+    width: 45vw;
+    height: calc(35vw + 120px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     margin: 30px auto;
     padding: 30px;
@@ -47,21 +50,25 @@
     position: relative;
 }
 
-.pergunta {
-    width: 700px;
+.card-title {
+    width: 93%;
     height: 138px;
 
     display: flex;
     justify-content: center;
     align-items: center;
 
+    position: absolute;
+    top: 30px;
+
     color: #ffffff;
     background-color: #434ca0;
+    overflow: hidden;
 }
 
-.respostas {
-    width: 700px;
-    height: 200px;
+.card-content {
+    width: 93%;
+    height: auto;
     margin-top: 15px;
 
     display: flex;
@@ -70,17 +77,58 @@
     justify-content: space-between;
 
     position: absolute;
+    top: 158px;
 }
 
 .resposta {
-    margin: 10px 0;
+    width: 19vw;
+    margin: 25px 12px 0;
+    overflow: hidden;
 }
 
 .resposta img {
-    width: 340px;
-    height: 175px;
+    width: 19vw;
+    height: 10vw;
 
     object-fit: cover;
+}
+
+.resultado {
+    width: 45vw;
+    height: 40vw;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #ffffff;
+
+    position: relative;
+}
+
+/* .resultado .card-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+.resultado .card-content {
+    flex-wrap: initial;
+
+    margin-top: 30px;
+}
+
+.resultado img {
+    width: 23vw;
+    height: 20vw;
+
+    margin-right: 10px;
+}
+
+.resultado p {
+    font-size: 15px;
 }
 
 .hide {
