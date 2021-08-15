@@ -44,7 +44,7 @@
         object-fit: cover;
     }
     
-    .header-quizz .titulo {
+    .header-quizz .title {
         height: 142px;
     
         align-items: center;
@@ -52,7 +52,7 @@
         background: #00000091;
     }
     
-    .header-quizz .titulo span {
+    .header-quizz .title span {
         font-size: 39px;
     }
     
@@ -159,7 +159,7 @@
         object-fit: cover;
     }
     
-    .header-quizz .titulo {
+    .header-quizz .title {
         height: 142px;
     
         align-items: center;
@@ -167,7 +167,7 @@
         background: #00000091;
     }
     
-    .header-quizz .titulo span {
+    .header-quizz .title span {
         font-size: 39px;
     }
     

@@ -21,14 +21,14 @@ function abrirQuizz(quizz) {
     pagina.innerHTML = `<div class="header-quizz">
                             <img src="${dados.image}">
                             
-                            <div class="titulo">
+                            <div class="title">
                                 <span>${dados.title}</span>
                             </div>
                         </div>`;
 
     for (let i = 0; i < quizz.data[indice].questions.length; i++) {
         for (let j = 0; j < quizz.data[indice].questions[i].answers.length; j++) {
-            respostas += `<div class="resposta">
+            respostas += `<div class="resposta" onclick="selecionarResposta(this, ${quizz.data[indice].questions[i].answers[j].isCorrectAnswer})>
                             <img src="${quizz.data[indice].questions[i].answers[j].image}">
                             <h5>${quizz.data[indice].questions[i].answers[j].text}</h5>
                         </div>`
@@ -45,4 +45,12 @@ function abrirQuizz(quizz) {
                             </div>`
         respostas = "";
     }             
+}
+
+function selecionarResposta(resposta, clicada) {
+    if (clicada) {
+        clicada.classList.add("resposta-correta")
+    } else {
+        clicada.classList.add("resposta-correta")
+    }
 }
