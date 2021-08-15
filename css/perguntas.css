@@ -48,6 +48,8 @@
     background-color: #ffffff;
 
     position: relative;
+
+    overflow: hidden;
 }
 
 .card-title {
@@ -82,8 +84,8 @@
 
 .resposta {
     width: 19vw;
+    height: calc(10vw + 114px);
     margin: 25px 12px 0;
-    overflow: hidden;
 }
 
 .resposta img {
