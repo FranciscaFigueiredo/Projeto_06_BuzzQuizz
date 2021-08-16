@@ -20,7 +20,7 @@ function listarQuizzes(quizzes) {
     
 }
 
-
+let id = 0;
 function listarQuizzPessoal() {
     const quizz_string = localStorage.getItem("quizz");
     const quizz = JSON.parse(quizz_string);
@@ -28,7 +28,7 @@ function listarQuizzPessoal() {
     const pessoais = document.querySelector(".pessoais");
     const quizzes = document.querySelector(".quizzes");
     const divCriar = document.querySelector(".criar-quizz");
-
+    id = quizz.id;
     if (quizz === null) {
         return;
     }
@@ -36,7 +36,7 @@ function listarQuizzPessoal() {
         pessoais.classList.remove("hide");
         divCriar.classList.add("hide");
         for(let i = 0; i < quizz.length;i++){
-            quizzes.innerHTML += `<div class="card">
+            quizzes.innerHTML += `<div class="card" onClick="abrirQuiz(${id})">
                                     <img src="${quizz[i].image}">
                                     <div class="title">
                                         <span>${quizz[i].title}</span>
@@ -431,3 +431,4 @@ function criarQuizz(){
     todos.classList.add("hide");
     tela1.classList.remove("hide");
 }
+
