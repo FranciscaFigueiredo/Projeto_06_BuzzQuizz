@@ -58,28 +58,27 @@ function paginaCriacaoQuizz(quizz) {
 
 
 function criarQuizz (){
-    const section = document.querySelector(".fazer-quiz");
     const todos = document.querySelector(".todos");
     todos.classList.add("hide");
-    section.classList.remove("hide");
+   tela1.classList.remove("hide");
 }
 
 
 function start(){
-    titulo = document.querySelector(".title").value;
+    titulo = document.querySelector(".titulo").value;
     URLimagemPrincipal= document.querySelector(".urlPrin").value;
     quantidadePerguntas = Number(document.querySelector(".qtdQ").value);
     quantidadeNiveis = Number(document.querySelector(".qtdN").value);
-    console.log(titulo.length);
+
     if (titulo === '' || URLimagemPrincipal === '' || quantidadePerguntas === '' || quantidadeNiveis === ''){
         alert("Impossível continuar, campo vazio");
     }
     else if(quantidadePerguntas < 3 || isNaN(quantidadePerguntas) || quantidadeNiveis < 2 || isNaN(quantidadeNiveis)){
         alert("Quantidade de perguntas ou níveis invalida");
     } 
-    else if((titulo.length < 20 || titulo.length > 65) || !URLimagemPrincipal.includes("https:") ){
-        alert("Título ou URL invalida");
-    }
+   // else if((titulo.length < 20 || titulo.length > 65) || !URLimagemPrincipal.includes("https:") ){
+       // alert("Título ou URL invalida");
+    //}
     else {
         tela1.classList.add("hide");
         tela2.classList.remove("hide");
@@ -223,6 +222,8 @@ function criarPerguntas(){
         ]
     }
     console.log(quizz)
+    tela2.classList.add("hide");
+    tela3.classList.remove("hide");
    
 }
 
@@ -237,13 +238,13 @@ function abrirLVL(lvl){
 function finalizarQuizz(){
 
     let tituloLevel1 = document.querySelector(".lvlTitle1").value;
-    let acerto1 = document.querySelector(".%acerto1").value;
-    let url1 = document.querySelector("URLlvl1").value;
+    let acerto1 = document.querySelector(".acerto1").value;
+    let url1 = document.querySelector(".URLlvl1").value;
     let desc1 = document.querySelector(".descLVL1").value;
-    let tituloLevel2 = document.querySelector(".lvlTitle1").value;
-    let acerto2 = document.querySelector(".%acerto1").value;
-    let url2 = document.querySelector("URLlvl1").value;
-    let desc2 = document.querySelector(".descLVL1").value;
+    let tituloLevel2 = document.querySelector(".lvlTitle2").value;
+    let acerto2 = document.querySelector(".acerto2").value;
+    let url2 = document.querySelector(".URLlvl2").value;
+    let desc2 = document.querySelector(".descLVL2").value;
     // let tituloLevel3 = document.querySelector(".lvlTitle1").value;
     // let acerto3 = document.querySelector(".%acerto1").value;
     // let url3 = document.querySelector("URLlvl1").value;
@@ -253,10 +254,108 @@ function finalizarQuizz(){
         alert("Titulo deve ser maior que 10 caracteres");
         return;
     }
-    if ((Number(acerto1) < 0 || Number(acerto1) > 100) || (Number(acerto2) < 0 || Number(acerto3) > 100)){
+    if ((Number(acerto1) < 0 || Number(acerto1) > 100) || (Number(acerto2) < 0 || Number(acerto2) > 100)){
         alert("Porcentagem invalida");
         return;
     }
 
+    if(!url1.includes("https:") || !url2.includes("https:")){
+        alert("URL inválida");
+        return;
+    }
+
+    if(desc1.length < 30 || desc2.length < 30){
+        alert("Descriação deve ter no minimo 30 caracteres");
+        return;
+    }
+
+    quizz = {
+        title: titulo,
+        image: URLimagemPrincipal,
+        questions: [
+            {
+                title: textoP1,
+                color: corfundoP1,
+                answers: [
+                    {
+                        text: corretaP1,
+                        image: urlCorretaP1,
+                        isCorrectAnswer: true
+                    },
+                    {
+                        text: incorretaP1_1,
+                        image: incorretaP1_1URL,
+                        isCorrectAnswer: false
+                    }
+                ]
+            },
+            {
+                title: textoP2,
+                color: corfundoP2,
+                answers: [
+                    {
+                        text: corretaP2,
+                        image: urlCorretaP2,
+                        isCorrectAnswer: true
+                    },
+                    {
+                        text: incorretaP2_1,
+                        image: incorretaP2_1URL,
+                        isCorrectAnswer: false
+                    }
+                ]
+            },
+            {
+                title: textoP3,
+                color: corfundoP3,
+                answers: [
+                    {
+                        text:corretaP3,
+                        image: urlCorretaP3,
+                        isCorrectAnswer: true
+                    },
+                    {
+                        text: incorretaP3_1,
+                        image: incorretaP3_1URL,
+                        isCorrectAnswer: false
+                    }
+                ]
+            }
+        ],
+        levels: [
+            {
+                title: tituloLevel1,
+                image: url1,
+                text: desc1,
+                minValue: 0
+            },
+            {
+                title: tituloLevel2,
+                image: url2,
+                text: desc2,
+                minValue: 50
+            }
+        ]
+    }
+
+
+    const promisse = axios.post("https://mock-api.bootcamp.respondeai.com.br/api/v3/buzzquizz/quizzes",quizz)
+    promisse.then(enviarQuizz);
+}
+
+
+function enviarQuizz(){
+    const tela4 = document.querySelector(".tela4");
+    tela4.classList.remove("hide");
+    tela4.innerHTML = "";
+    tela4.innerHTML += `<h2>Seu quizz está pronto!</h2>
+    <div class="card2">
+        <img src="${URLimagemPrincipal}">
+        <div class="titulo">
+            <span>${titulo}</span>
+        </div>
+    </div>
+    <button>Acessar quizz</button>
+    <a href="">Voltar para home</a>`
 
 }
