@@ -1,4 +1,5 @@
 let home = document.querySelector(".todos");
+let pessoais = document.querySelector(".pessoais");
 let indice;
 
 function verQuizzes(i) {
@@ -9,6 +10,7 @@ function verQuizzes(i) {
 
 function abrirQuizz(quizz) {
     home.classList.toggle("hide");
+    pessoais.classList.toggle("hide");
     let pagina = document.querySelector(".perguntas-quizz");
     let respostas = document.querySelector(".card-content");
     pagina.classList.toggle("hide");
@@ -48,8 +50,9 @@ function abrirQuizz(quizz) {
 }
 
 function selecionarResposta(resposta, clicada) {
+    console.log(clicada);
     if (clicada) {
-        clicada.classList.add("resposta-correta")
+        clicada.classList.add("resposta-correta");
     } else {
         clicada.classList.add("resposta-correta")
     }

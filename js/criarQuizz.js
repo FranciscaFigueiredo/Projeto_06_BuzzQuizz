@@ -27,7 +27,7 @@ let incorretaP3_1URL;
 const tela2 = document.querySelector(".tela2");
 const tela1 = document.querySelector(".create-quizz");
 const tela3 = document.querySelector(".tela3");
-
+const pessoais = document.querySelector(".pessoais");
 function paginaCriacaoQuizz(quizz) {
     console.log(quantidadePerguntas)
 
@@ -79,6 +79,8 @@ function paginaCriacaoQuizz(quizz) {
 function criarQuizz (){
     const todos = document.querySelector(".todos");
     todos.classList.add("hide");
+    pessoais.classList.add("hide");
+
    tela1.classList.remove("hide");
 }
 
@@ -360,7 +362,7 @@ function finalizarQuizz(){
 }
 
 
-function enviarQuizz(){
+function enviarQuizz(quizz){
     const tela4 = document.querySelector(".tela4");
     tela3.classList.add("hide");
     tela4.classList.remove("hide");
@@ -368,11 +370,18 @@ function enviarQuizz(){
     tela4.innerHTML += `<h2>Seu quizz está pronto!</h2>
     <div class="card2">
         <img src="${URLimagemPrincipal}">
-        <div class="titulo">
+        <div class="title">
             <span>${titulo}</span>
         </div>
     </div>
     <button>Acessar quizz</button>
-    <a href="">Voltar para home</a>`
+    <a href="" onclick="redirecionar();">Voltar para home</a>`
+    const quizz_usuario = quizz.data.id;
+    const string_quizz = [];
+    string_quizz.push(JSON.stringify(quizz_usuario));
+    localStorage.setItem("quizz",string_quizz);
+}
 
+function redirecionar() {
+    window.location.reload;
 }
