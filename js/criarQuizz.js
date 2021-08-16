@@ -4,6 +4,25 @@ let URLimagemPrincipal;
 let quantidadePerguntas;
 let quantidadeNiveis;
 let quizz = {};
+let textoP1 ;
+let urlCorretaP1 ;
+let incorretaP1_1 ;
+let incorretaP1_1URL;
+
+let textoP2 ;
+let corfundoP2;
+let corretaP2 ;
+let urlCorretaP2;
+let incorretaP2_1;
+let incorretaP2_1URL;
+
+let textoP3 ;
+let corfundoP3 ;
+let corretaP3 ;
+let urlCorretaP3 ;
+let incorretaP3_1 ;
+let incorretaP3_1URL;
+
 
 const tela2 = document.querySelector(".tela2");
 const tela1 = document.querySelector(".create-quizz");
@@ -65,7 +84,7 @@ function criarQuizz (){
 
 
 function start(){
-    titulo = document.querySelector(".titulo").value;
+    titulo = document.querySelector(".titulo-quizz").value;
     URLimagemPrincipal= document.querySelector(".urlPrin").value;
     quantidadePerguntas = Number(document.querySelector(".qtdQ").value);
     quantidadeNiveis = Number(document.querySelector(".qtdN").value);
@@ -76,9 +95,9 @@ function start(){
     else if(quantidadePerguntas < 3 || isNaN(quantidadePerguntas) || quantidadeNiveis < 2 || isNaN(quantidadeNiveis)){
         alert("Quantidade de perguntas ou níveis invalida");
     } 
-   // else if((titulo.length < 20 || titulo.length > 65) || !URLimagemPrincipal.includes("https:") ){
-       // alert("Título ou URL invalida");
-    //}
+    else if((titulo.length < 20 || titulo.length > 65) || !URLimagemPrincipal.includes("https:") ){
+        alert("Título ou URL invalida");
+    }
     else {
         tela1.classList.add("hide");
         tela2.classList.remove("hide");
@@ -99,33 +118,30 @@ function abrirPergunta(pergunta){
 
 function criarPerguntas(){
     // Pegando valores das perguntas(apenas 1 resposta incorreta)//
-    const perguntas = {
-
-    }
-    let textoP1 = document.querySelector(".textP1").value;
-    let corfundoP1 = document.querySelector(".colorP1") .value;
-    let corretaP1 = document.querySelector(".correctP1").value;
-    let urlCorretaP1 = document.querySelector(".correctURL-P1").value;
-    let incorretaP1_1 = document.querySelector(".incorrectP1-1").value;
-    let incorretaP1_1URL = document.querySelector(".incorrectP1-1URL").value;
+     textoP1 = document.querySelector(".textP1").value;
+     corfundoP1 = document.querySelector(".colorP1") .value;
+     corretaP1 = document.querySelector(".correctP1").value;
+     urlCorretaP1 = document.querySelector(".correctURL-P1").value;
+     incorretaP1_1 = document.querySelector(".incorrectP1-1").value;
+     incorretaP1_1URL = document.querySelector(".incorrectP1-1URL").value;
     
    
     
-    let textoP2 = document.querySelector(".textP2").value;
-    let corfundoP2 = document.querySelector(".colorP2") .value;
-    let corretaP2 = document.querySelector(".correctP2").value;
-    let urlCorretaP2 = document.querySelector(".correctURL-P2").value;
-    let incorretaP2_1 = document.querySelector(".incorrectP2-1").value;
-    let incorretaP2_1URL = document.querySelector(".incorrectP2-1URL").value;
+    textoP2 = document.querySelector(".textP2").value;
+    corfundoP2 = document.querySelector(".colorP2") .value;
+    corretaP2 = document.querySelector(".correctP2").value;
+    urlCorretaP2 = document.querySelector(".correctURL-P2").value;
+    incorretaP2_1 = document.querySelector(".incorrectP2-1").value;
+    incorretaP2_1URL = document.querySelector(".incorrectP2-1URL").value;
     
     
     
-    let textoP3 = document.querySelector(".textP3").value;
-    let corfundoP3 = document.querySelector(".colorP3") .value;
-    let corretaP3 = document.querySelector(".correctP3").value;
-    let urlCorretaP3 = document.querySelector(".correctURL-P3").value;
-    let incorretaP3_1 = document.querySelector(".incorrectP3-1").value;
-    let incorretaP3_1URL = document.querySelector(".incorrectP3-1URL").value;
+    textoP3 = document.querySelector(".textP3").value;
+    corfundoP3 = document.querySelector(".colorP3") .value;
+    corretaP3 = document.querySelector(".correctP3").value;
+    urlCorretaP3 = document.querySelector(".correctURL-P3").value;
+    incorretaP3_1 = document.querySelector(".incorrectP3-1").value;
+    incorretaP3_1URL = document.querySelector(".incorrectP3-1URL").value;
 
     let URLS = [urlCorretaP1,urlCorretaP2,urlCorretaP3,incorretaP1_1URL,incorretaP2_1URL,incorretaP3_1URL];
 
@@ -346,6 +362,7 @@ function finalizarQuizz(){
 
 function enviarQuizz(){
     const tela4 = document.querySelector(".tela4");
+    tela3.classList.add("hide");
     tela4.classList.remove("hide");
     tela4.innerHTML = "";
     tela4.innerHTML += `<h2>Seu quizz está pronto!</h2>
