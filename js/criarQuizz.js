@@ -376,7 +376,7 @@ function enviarQuizz(quizz){
     </div>
     <button>Acessar quizz</button>
     <a href="" onclick="redirecionar();">Voltar para home</a>`
-    const quizz_usuario = quizz.data.id;
+    const quizz_usuario = quizz;
     const string_quizz = [];
     string_quizz.push(JSON.stringify(quizz_usuario));
     localStorage.setItem("quizz",string_quizz);
